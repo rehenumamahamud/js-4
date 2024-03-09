@@ -1,0 +1,161 @@
+/* Common Css Start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* Common Css End */
+
+body {
+    min-height: 100vh;
+    background: #12c2e9; 
+    background:  #c471ed;
+
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 40%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.3)
+}
+form input{
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px 40px 10px 15px;
+    border-radius: 5px;
+}
+form .input-style{
+    position: relative;
+}
+form .input-style button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+form > button{
+    font-size: 20px;
+    background: #12c2e9;
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+.cursor{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.cursorSm{
+    pointer-events: none;
+    transition: 0.06s;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+nav{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 15px 0;
+}
+
+nav .navBtn{
+    padding: 15px ;
+    background-color: black;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: relative;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.351);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    max-width: 350px;
+    width: 80%;
+    top: 0;
+    right: 0;
+    height:100%;
+}
+
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar .sidebarCnt{
+    width: 80%;
+    max-width: 450px;
+    height: 100vh;
+    background-color: gray;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+}
+
+.sidebar.active .sidebarCnt{
+    transform: translateX(0%);
+
+}
+
+
+.sidebar .sidebarCnt p{
+    padding: 100px 20px;
+    text-align: justify;
+}
+
+.sidebar .sidebarCnt .cancelBtn{
+    width: 40px;
+    height: 40px;
+    background-color:black;
+    line-height: 40px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    display: block;
+    right: 20px;
+    top: 20px;
+}
